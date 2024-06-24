@@ -1,0 +1,16 @@
+<div class="select-container">
+    <label for="categoryFilter">Select Category:</label>
+    <select id="categoryFilter" [(ngModel)]="selectedCategory" (change)="updateChart()">
+      <option value="financier">Financier</option>
+      <option value="reg">Reg</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="statusFilter">Select Status:</label>
+    <select id="statusFilter" [(ngModel)]="selectedStatus" (change)="updateChart()">
+      <option value="all">All</option>
+      <option value="test_status">Test Status</option>
+      <option value="criticite">Criticity</option>
+    </select>
+</div>
+
+<div id="main10" class="echart-container"></div>

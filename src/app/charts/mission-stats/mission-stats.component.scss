@@ -1,0 +1,33 @@
+.date-inputs {
+    display: flex;
+    align-items: center;
+  }
+  
+  .date-inputs label {
+    margin-right: 5px; /* Reduce margin */
+    font-size: 14px; /* Reduce font size */
+  }
+  
+  .date-inputs input[type="date"] {
+    padding: 5px; /* Reduce padding */
+    border: 1px solid #ccc;
+    border-radius: 3px; /* Reduce border radius */
+    font-size: 14px; /* Reduce font size */
+    width: 120px; /* Adjust width */
+  }
+  
+  /* Optional: Style the button */
+  .date-inputs button {
+    padding: 8px 15px; /* Adjust padding */
+    font-size: 14px; /* Reduce font size */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px; /* Reduce border radius */
+    cursor: pointer;
+  }
+  
+  .date-inputs button:hover {
+    background-color: #0056b3;
+  }
+  

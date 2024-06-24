@@ -1,0 +1,27 @@
+/* Style for the select dropdown */
+.select-filter {
+    width: 200px; /* Adjust width as needed */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Style for the select dropdown options */
+  .select-filter option {
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style for the select dropdown arrow */
+  .select-filter::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  

@@ -1,0 +1,34 @@
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+
+
+
+
+<div class="container">
+	<div class="row" sortablejs [sortablejsOptions]="{ group: 'shared' }" (sortablejsOnUpdate)="onUpdate($event)">
+        <div *ngFor="let card of cards" class="col-xl-3 col-lg-3">
+            <div class="card" [ngClass]="card.bgClass">
+                <div class="card-statistic-3 p-3">
+					<div class="card-icon card-icon-large"><i [ngClass]="card.icon"></i></div>
+
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">{{card.title}}</h5>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h2 class="d-flex align-items-center mb-0">
+								{{card.value}}
+                            </h2>
+                        </div>
+                        
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+       
+</div>
+

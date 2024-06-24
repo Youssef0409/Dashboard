@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<br>
+<div #content >
+  <div class="cont">
+
+  <a (click)="makePDf()"><span>Download</span><span>PDF</span></a>
+<app-stats></app-stats></div>
+<!-- app.component.html -->
+<!-- app.component.html -->
+<div class="container" >
+  <div id="sortable-container" class="row mb-4" [sortablejs]="items" [sortablejsOptions]="sortableOptions" data-db-identifier="chartRow">
+    <div *ngFor="let item of items" class="card" [ngClass]="{'col-12': item.fullWidth, 'col-md-6': !item.fullWidth}">
+      <div class="card-body">
+        <h4 class="text-center">{{ item.title }}</h4>
+        <ng-container [ngSwitch]="item.component">
+          <app-mission-auditor *ngSwitchCase="'app-mission-auditor'"></app-mission-auditor>
+          <app-risques *ngSwitchCase="'app-risques'"></app-risques>
+          <div #content2>        <app-efficacite-controle *ngSwitchCase="'app-efficacite-controle'"></app-efficacite-controle>
+          <app-audit-qualite *ngSwitchCase="'app-audit-qualite'"></app-audit-qualite>
+          <app-mission-stats *ngSwitchCase="'app-mission-stats'"></app-mission-stats>
+          <app-cartographique-risques *ngSwitchCase="'app-cartographique-risques'"></app-cartographique-risques>
+          <app-rapport-validation *ngSwitchCase="'app-rapport-validation'"></app-rapport-validation>
+          <app-impact-constat *ngSwitchCase="'app-impact-constat'"></app-impact-constat>
+          <app-annual-planning *ngSwitchCase="'app-annual-planning'"></app-annual-planning></div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,10 @@
+<div class="date-inputs">
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" [(ngModel)]="startDate" (ngModelChange)="onDateChange()">
+    
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" [(ngModel)]="endDate" (ngModelChange)="onDateChange()">
+    
+</div>
+
+<div id="main" style="width: 500px; height: 300px;"></div>
